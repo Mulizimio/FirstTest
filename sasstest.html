@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sasstest.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <script src="layui/layui.all.js"></script>
+</head>
+<body>
+    <!--
+    <ul class="layui-nav" lay-filter="">
+        <li class="layui-nav-item"><a href="">最新活动</a></li>
+        <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+        <li class="layui-nav-item"><a href="">大数据</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">解决方案</a>
+            <dl class="layui-nav-child"> 
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+    -->
+    <div style="width: 300px;height: 100px;border: 1px solid #000000;">
+    <p style="height: 20px;">start!</p>
+        <div class="dropdown">
+            <button class="dropbtn">下拉菜单</button>
+            <div class="dropdown-content">
+            <a href="#">AAA</a>
+            <a href="#">BBB</a>
+            <a href="#">CCC</a>
+            </div>
+        </div>
+    </div>
+    <div id="attention">
+        <p>attention</p>
+    </div>
+    <div class="testform">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="text" name="testname" required lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">选择</label>
+            <div class="layui-input-block">
+                <select name="testcity" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">北京</option>
+                    <option value="1">上海</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-irem">
+            <label class="layui-form-label">单选框</label>
+            <div class="layui-input-block">
+                <input type="radio" name="sex" value="1" title="男" checked>
+                <input type="radio" name="sex" value="2" title="女">
+            </div>
+        </div>
+    </form>
+    </div>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+            var element = layui.element;
+    
+            //…
+        });
+        layui.use('form',function(){
+            var form = layui.form;
+            form.render(); //重新渲染 否则无法正常显示
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <title>弹窗测试</title>
+    <style>
+        body .test .layui-layer-title{
+            background:lightpink;
+            color:#fff;
+            border: none;
+        }
+        body .test .layui-layer-btn{
+            border-top:1px solid lightpink;
+        }
+        body .test .layui-layer-btn a{
+            background:green;
+            color: #fff;
+            border: none;
+        }
+        body .test .layui-layer-btn .layui-layer-btn1{
+            background: lightpink;
+            /* border: none; */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        layui.use('layer', function(){
+        var layer = layui.layer;
+
+        //layer.msg('hello');
+
+        layer.open({
+        //提示框标题 
+        title: '在线调试',
+        //样式 
+        skin:'test',
+        //基本层类型 0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+        type:1,
+        //弹出动画 anim:4,
+        //延时关闭 time:3000,
+        //宽高 area: ['500px', '300px']
+        //坐标 offset:'100px',
+        //图标 layer.msg('不开心。。', {icon: 5});
+        //遮罩 shade: [0.8, '#393D49']；
+        //固定 fixed:
+        //层叠顺序 zIndex:
+        tips: [1, '#c00'],
+        content: '随便test一下_(:з」∠)_',
+        success:function(layero,index){
+        console.log(layero,index);
+        }
+        });
+
+        layer.confirm('a?',{
+                skin:'test',
+                btn:['1','2','3'],
+                btn3:function(index,layero){
+                }
+            },
+                function(index,layero){
+            },function(index){
+        });
+
+        // layer.alert('加了个图标', {icon: 1}); 
+
+        layer.tab({
+        area: ['600px', '300px'],
+        tab: [{
+            title: 'TAB1', 
+            content: '内容1'
+        }, {
+            title: 'TAB2', 
+            content: '内容2'
+        }, {
+            title: 'TAB3', 
+            content: '内容3'
+        }]
+        });
+        });
+    </script>
+</body>
+</html>

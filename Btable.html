@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="http://www.itxst.com/package/jquery-3.3.1/jquery.js"></script>
+    <link href="http://www.itxst.com/package/bootstrap-4.3.1/css/bootstrap.css" rel="stylesheet" />
+    <link href="http://www.itxst.com/package/bootstrap-table-1.15.3/bootstrap-table.css" rel="stylesheet" />
+    <script src="http://www.itxst.com/package/bootstrap-table-1.15.3/bootstrap-table.js"></script> 
+    <title>bootstrap table load在线例子</title>
+    <style>
+        .table-demo {
+            width: 80%;
+            margin: 30px auto 0px auto;
+        }
+        .titles {
+            float: right;
+            clear: both;
+        }
+        .btn-rb {
+            border-radius: 5px;
+        }
+        .input-rewrite{
+            white-space: nowrap;
+            display: inline;
+        }
+        .input-rewrite::after{
+            content: "*";
+        }
+    </style>
+</head>
+<body>
+  <div id="toolbar">
+    <button class="btn-rb" onclick="loadData()">load加载新数据</button> 
+  </div>
+    <div class="table-demo">
+        <table id="table"  ></table>
+    </div>
+    <!-- <span class="input-rewrite" style="width: 200px;">
+        <input class="input-group" value="请输入用户名">
+    </span> -->
+    <script>
+        //设置需要显示的列
+        var columns = [
+           { 
+           field:"Id",  
+          title: 'ID'
+        }, {
+            field: 'Car',
+            title: '品牌'
+        } ];
+        var data= [ ];
+        
+        //bootstrap table初始化数据
+        $('#table').bootstrapTable({  
+            toolbar:"#toolbar",  
+            data:data,
+            columns: columns,  
+        });
+      
+     function loadData()
+      {
+      //newData你从服务器上返回的新数据
+       var newData = [{
+            Id: 2000,
+            Car: '雅阁', 
+        }, {
+            Id: 2002,
+            Car: '帕萨特', 
+        }, {
+            Id: 2003,
+            Car: '思域', 
+        } ];
+        
+       $('#table').bootstrapTable('load', newData);
+      }
+       
+          
+    </script>
+</body>
+</html>
