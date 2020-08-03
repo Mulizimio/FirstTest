@@ -1,0 +1,56 @@
+.tag2 {
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  color: #FFFFFF;
+  background-color: #00968F;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 4px 10px;
+  left: 10px;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.tag2:hover {
+  background-color: #82D22C;
+  box-shadow: none;
+  outline: none;
+}
+.tag2:hover::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+  border: 11px solid;
+  left: -22px;
+  border-color: transparent #82D22C transparent transparent;
+}
+.tag2:active {
+  background-color: #82D22C;
+  outline: none;
+}
+.tag2:active::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+  border: 11px solid;
+  left: -22px;
+  border-color: transparent #82D22C transparent transparent;
+}
+.tag2::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+  border: 11px solid #00968F;
+  left: -22px;
+  border-color: transparent #00968F transparent transparent;
+}
+
+/*# sourceMappingURL=buttontagtest.css.map */
