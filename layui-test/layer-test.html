@@ -24,6 +24,33 @@
             background: lightpink;
             /* border: none; */
         }
+        /* body .layui-layer-setwin{
+            top: 5px;
+            right: 5px;
+        } */
+        body .layui-layer-setwin .layui-layer-close1{
+            /* transform: scale(1.5); */
+            /*1*/
+            /* width: 24px;
+            height: 24px;
+            background:url("/css/img/timg.jpg") no-repeat;
+            background-size: 24px 24px;
+            background-position: 0px 0px;
+            top: -5px; */
+            /*2*/
+            /* border: 10px solid transparent;
+            background-clip: padding-box; */
+            /* top: -10px;
+            right: -10px; */
+        }
+        body .layui-layer-setwin .layui-layer-close1::before{
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+        }
     </style>
 </head>
 <body>
