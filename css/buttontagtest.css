@@ -12,6 +12,7 @@
   outline: none;
   box-shadow: none;
   border: none;
+  cursor: pointer;
 }
 .tag2:hover {
   background-color: #82D22C;
@@ -30,7 +31,7 @@
 }
 .tag2:active {
   background-color: #82D22C;
-  outline: none;
+  opacity: 0.5;
 }
 .tag2:active::before {
   content: "";

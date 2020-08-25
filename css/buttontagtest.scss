@@ -12,6 +12,7 @@
     outline: none;
     box-shadow: none;
     border: none;
+    cursor: pointer;
     &:hover{
         background-color: #82D22C;
         box-shadow: none;
@@ -29,8 +30,9 @@
     }
     &:active{
         background-color: #82D22C;
-        box-shadow: none;
-        outline: none;
+        // box-shadow: none;
+        // outline: none;
+        opacity: 0.5;
         &::before{
             content: "";
             width: 0px;
